@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import "../styles/landing.css";
 import { gerarLinkWhatsApp } from "../utils/whatsapp";
+import { useFadeInOnScroll } from "../hooks/useFadeInOnScroll";
 
 export default function LandingPage() {
 
-  // ✅ LÓGICA FICA AQUI (FORA DO JSX)
+  useFadeInOnScroll();
+  console.log("hook rodou");
   const mensagem = `
 Olá! 👋
-Vi o site do cardápio digital e gostaria de saber como funciona para minha hamburgueria.
+Vi seu site e gostaria de entender como suas soluções digitais podem ajudar o meu negócio.
 `;
 
   return (
@@ -15,7 +17,7 @@ Vi o site do cardápio digital e gostaria de saber como funciona para minha hamb
 
       {/* NAVBAR */}
       <header className="landing-navbar">
-        <div className="landing-logo">Hamburguer Pro</div>
+        <div className="landing-logo">Disk Tech</div>
         <nav className="landing-nav">
           <Link to="/">Home</Link>
           <a href="#benefits">Benefícios</a>
@@ -27,14 +29,18 @@ Vi o site do cardápio digital e gostaria de saber como funciona para minha hamb
       {/* HERO */}
       <section className="landing-hero">
         <div className="hero-content">
-          <h1>Transforme seu WhatsApp em pedidos que convertem!</h1>
+          <h1>
+            Soluções digitais simples<br />
+            para negócios que querem crescer
+          </h1>
+
           <p>
-            Cardápio digital profissional e sistema de pedidos online
-            para sua hamburgueria vender mais sem depender de apps caros.
+            Sites, sistemas e automações sob medida para organizar processos,
+            melhorar o atendimento e gerar mais resultados — sem complicação.
           </p>
 
           <Link to="/cardapio" className="btn-primary">
-            Ver cardápio de exemplo
+            Ver um projeto de exemplo
           </Link>
         </div>
       </section>
@@ -42,20 +48,28 @@ Vi o site do cardápio digital e gostaria de saber como funciona para minha hamb
       {/* BENEFÍCIOS */}
       <section id="benefits" className="landing-benefits">
         <h2>Por que isso funciona?</h2>
+
         <div className="benefits-grid">
-          <div className="benefit-card">
-            <h3>✔ Mais Vendas</h3>
-            <p>Cliente vê tudo organizado e compra com facilidade.</p>
+          <div className="benefit-card fade-in">
+            <h3>Resultados Reais</h3>
+            <p>
+              Soluções pensadas para resolver problemas reais do dia a dia,
+              não apenas “ter um site”.
+            </p>
           </div>
 
-          <div className="benefit-card">
-            <h3>✔ Menos Erros</h3>
-            <p>Pedidos chegam completos e corretos no WhatsApp.</p>
+          <div className="benefit-card fade-in">
+            <h3>Processos Organizados</h3>
+            <p>
+              Menos bagunça no atendimento, mais clareza para você e para o cliente.
+            </p>
           </div>
 
-          <div className="benefit-card">
-            <h3>✔ Sem Taxas</h3>
-            <p>Você não paga nada para apps de terceiros.</p>
+          <div className="benefit-card fade-in">
+            <h3>Sem Taxas ou Dependências</h3>
+            <p>
+              Você é dono da solução. Nada de mensalidades abusivas ou plataformas presas.
+            </p>
           </div>
         </div>
       </section>
@@ -63,16 +77,19 @@ Vi o site do cardápio digital e gostaria de saber como funciona para minha hamb
       {/* COMO FUNCIONA */}
       <section id="how" className="landing-how">
         <h2>Como funciona</h2>
+
         <ol className="how-list">
-          <li>Acesse o cardápio no celular ou QR Code</li>
-          <li>Cliente escolhe o pedido sozinho</li>
-          <li>Pedido chega pronto no WhatsApp</li>
-          <li>Você confirma e atende rápido</li>
+          <li>Entendo o seu negócio e suas necessidades</li>
+          <li>Desenvolvo uma solução simples e objetiva</li>
+          <li>Você testa e valida</li>
+          <li>Colocamos no ar e começamos a gerar resultado</li>
         </ol>
       </section>
 
       {/* CTA FINAL */}
       <section id="contact" className="landing-final">
+        <h2>Vamos conversar sobre o seu projeto?</h2>
+
         <a
           href={gerarLinkWhatsApp("5581989745583", mensagem)}
           className="btn-primary"
@@ -85,8 +102,8 @@ Vi o site do cardápio digital e gostaria de saber como funciona para minha hamb
 
       {/* FOOTER */}
       <footer className="landing-footer">
-        <span>© 2025 Hamburguer Pro</span>
-        <span>Desenvolvido por Você</span>
+        <span>© 2025 Disk Tech</span>
+        <span>Soluções digitais sob medida</span>
       </footer>
 
     </div>
