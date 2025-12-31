@@ -17,7 +17,7 @@ Vi seu site e gostaria de entender como suas soluções digitais podem ajudar o 
 
       {/* NAVBAR */}
       <header className="landing-navbar">
-        <div className="landing-logo">Disk Tech</div>
+        <div className="landing-logo">UpBiz</div>
         <nav className="landing-nav">
           <Link to="/">Home</Link>
           <a href="#benefits">Benefícios</a>
@@ -103,7 +103,7 @@ Vi seu site e gostaria de entender como suas soluções digitais podem ajudar o 
       {/* FOOTER */}
       <footer className="landing-footer">
         <span>© 2025 Disk Tech</span>
-        <span>Soluções digitais sob medida</span>
+        <span> Soluções digitais sob medida</span>
       </footer>
 
     </div>
