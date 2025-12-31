@@ -1,0 +1,235 @@
+/* CONTAINER */
+.landing-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.landing-navbar {
+  position: sticky;
+  top: 0;
+  background: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  border-bottom: 1px solid rgba(197,198,199,0.15);
+  z-index: 100;
+}
+
+.landing-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #66FCF1;
+}
+
+.landing-nav a {
+  margin-left: 24px;
+  font-weight: 500;
+  color: #C5C6C7;
+  transition: color 0.3s;
+}
+
+.landing-nav a:hover {
+  color: #66FCF1;
+}
+
+/* HERO */
+.landing-hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f1f1f, #121212);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #C5C6C7;
+  margin-bottom: 36px;
+}
+
+/* BOTÃO */
+.btn-primary {
+  display: inline-block;
+  background: #66FCF1;
+  padding: 18px 40px;
+  border-radius: 10px;
+  color: #121212;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #45A29E;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(102, 252, 241, 0.25);
+}
+
+/* BENEFÍCIOS */
+.landing-benefits {
+  padding: 100px 20px;
+  text-align: center;
+  background: #121212; /* FIX */
+}
+
+
+.landing-benefits h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 50px;
+  color: #FFFFFF;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.benefit-card {
+  background: #1b1b1b;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(197,198,199,0.1);
+  transition: transform 0.3s, border 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: #45A29E;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #66FCF1;
+}
+
+.benefit-card p {
+  color: #C5C6C7;
+}
+
+/* COMO FUNCIONA */
+.landing-how {
+  padding: 100px 20px;
+  background: #161616; /* FIX */
+  text-align: center;
+}
+
+
+.landing-how h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.how-list {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  list-style: decimal inside;
+  line-height: 2;
+  color: #C5C6C7;
+}
+
+/* CTA FINAL */
+.landing-final {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.landing-final h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+/* FOOTER */
+.landing-footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #C5C6C7;
+  background: #121212; /* FIX */
+  border-top: 1px solid rgba(197,198,199,0.1);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #66FCF1;
+  color: #121212;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 10px 25px rgba(102,252,241,0.35);
+  z-index: 999;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .landing-navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    padding: 16px 30px;
+    font-size: 1rem;
+  }
+
+  .landing-benefits h2,
+  .landing-how h2,
+  .landing-final h2 {
+    font-size: 2rem;
+  }
+}
+
