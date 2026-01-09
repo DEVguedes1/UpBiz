@@ -85,19 +85,30 @@ export default function Cardapio() {
             <div className="items-grid">
               {secaoFiltrada.itens.map((item) => (
                 <div key={item.id} className="menu-item">
-                  <h3>{item.nome}</h3>
-                  <p className="description">{item.descricao}</p>
-                  <div className="prices">
+                    
+                    {/* ESPAÇO PARA A IMAGEM */}
+                    <div className="item-image-container">
+                    <img 
+                        src={item.imagem || 'https://via.placeholder.com/300x200?text=Original+Burguer'} 
+                        alt={item.nome} 
+                        className="menu-item-img" 
+                    />
+                    </div>
+
+                    <h3>{item.nome}</h3>
+                    <p className="description">{item.descricao}</p>
+                    
+                    <div className="prices">
                     {item.precos.map((p, pi) => (
-                      <span key={pi}>
+                        <span key={pi}>
                         {p.tamanho ? `${p.tamanho} = ` : ""}
                         {p.valor}
                         {pi < item.precos.length - 1 ? ' | ' : ''}
-                      </span>
+                        </span>
                     ))}
-                  </div>
+                    </div>
                 </div>
-              ))}
+                ))}
             </div>
           </section>
         ) : (
