@@ -102,7 +102,7 @@ Vi seu site e gostaria de entender como suas soluções digitais podem ajudar o 
 
       {/* FOOTER */}
       <footer className="landing-footer">
-        <span>© 2025 Disk Tech</span>
+        <span>© 2025 UpBiz</span>
         <span> Soluções digitais sob medida</span>
       </footer>
 
